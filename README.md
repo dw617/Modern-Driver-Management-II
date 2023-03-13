@@ -11,4 +11,6 @@ High level on how this works
     * Downloads content 
     * Reads the filename, pulls out Make, Model, Driver Version, OS version, etc - captures these as variables. Dell doesn't have consistent filenames for driver packs,        so there's a bunch of regex matching to help with this.
     * Extracts exe or cab file, then runs dism with a recurse to install the drivers.
-    * Various reporting bits to our OSD dashboard, local registry and a log file is written in the ccm logs area.In our CM fileshare - DEV and PROD folders, each have          subfolders that align to the WMIC Model of the endpoint (ex : Latitude 5430).
+    * Various reporting bits to our OSD dashboard, local registry and a log file is written in the ccm logs area. 
+
+See the word document for more details on how to integrate this into your TS.
