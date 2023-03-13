@@ -8,9 +8,9 @@ High level on how this works
 * Enterprise driver pack from Dell gets placed in each folder and a package is created.
 * In the TS, I align the packageID to Make/Model query.
 * Powershell script does the rest: > 
-    * Downloads content 
-    * Reads the filename, pulls out Make, Model, Driver Version, OS version, etc - captures these as variables. Dell doesn't have consistent filenames for driver packs,        so there's a bunch of regex matching to help with this.
+    * Downloads content from DP
+    * Reads the filename, pulls out Make, Model, Driver Version, OS version, etc and captures these as variables. Dell doesn't have consistent filenames for driver             packs, so there's a bunch of regex matching to help with this.
     * Extracts exe or cab file, then runs dism with a recurse to install the drivers.
-    * Various reporting bits to our OSD dashboard, local registry and a log file is written in the ccm logs area. 
+    * Various reporting bits (via TS Variables) to our OSD dashboard and local registry. Also a log file is written in the ccm logs area. 
 
 See the word document for more details on how to integrate this into your TS.
